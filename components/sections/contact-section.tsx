@@ -17,7 +17,7 @@ export function ContactSection() {
           <SectionHeading
             eyebrow="Contact"
             title="Open to analyst roles, internships, and meaningful data work"
-            description="If you’re hiring for someone who can clean data, ask better questions, and explain the signal clearly, let’s connect."
+            description="If you're hiring for someone who can clean data, ask better questions, and explain the signal clearly, let's connect."
           />
         </Reveal>
 

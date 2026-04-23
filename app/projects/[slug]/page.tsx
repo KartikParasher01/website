@@ -9,17 +9,20 @@ import { Separator } from "@/components/ui/separator";
 import { projects } from "@/data/portfolio";
 
 type ProjectPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((entry) => entry.slug === params.slug);
+export const dynamicParams = false;
+
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
+  const project = projects.find((entry) => entry.slug === slug);
 
   if (!project) {
     notFound();
