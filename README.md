@@ -39,8 +39,10 @@ A recruiter-focused data analyst portfolio built with Next.js App Router, Tailwi
 |   `-- portfolio.ts
 |-- lib
 |   `-- utils.ts
-|-- .eslintrc.json
+|-- .editorconfig
+|-- .gitattributes
 |-- components.json
+|-- eslint.config.mjs
 |-- next-env.d.ts
 |-- next.config.mjs
 |-- package.json
@@ -65,6 +67,21 @@ npm run dev
 ```
 
 4. Open `http://localhost:3000`.
+
+## Validate Locally
+
+Run the project checks before pushing:
+
+```bash
+npm run check
+```
+
+Available scripts:
+
+- `npm run lint` for ESLint
+- `npm run lint:fix` to auto-fix lint issues where possible
+- `npm run typecheck` for TypeScript validation
+- `npm run build` for a production build
 
 ## Deploy To Vercel
 
