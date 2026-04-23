@@ -1,4 +1,4 @@
-# Data Analyst Portfolio
+# Data Science Portfolio
 
 A recruiter-focused data analyst portfolio built with Next.js App Router, Tailwind CSS, Framer Motion, and shadcn/ui-style reusable components.
 

@@ -11,12 +11,12 @@ export function ExperienceSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Experience"
-            title="Internship work shaped around impact"
-            description="Instead of listing responsibilities, this section focuses on how the analysis helped teams work faster, see clearer patterns, and make better decisions."
+            title="Experience shaped by real business data work"
+            description="This section focuses on measurable analytical growth, practical reporting work, and the tools I have been building with in a live business environment."
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-2">
+        <div className="mt-12 grid gap-5 lg:grid-cols-1">
           {experiences.map((experience, index) => (
             <Reveal delay={0.08 * index} key={experience.company}>
               <Card className="h-full">

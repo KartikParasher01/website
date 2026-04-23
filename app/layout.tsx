@@ -19,9 +19,9 @@ const display = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Data Analyst Portfolio`,
+  title: `${siteConfig.name} | Data Science Portfolio`,
   description:
-    "Recruiter-focused data analyst portfolio built with Next.js, Tailwind CSS, Framer Motion, and shadcn/ui-inspired components."
+    "Recruiter-focused data science portfolio built with Next.js, Tailwind CSS, Framer Motion, and shadcn/ui-inspired components."
 };
 
 export default function RootLayout({

@@ -13,13 +13,13 @@ const workflowCards = [
     icon: Database
   },
   {
-    title: "Python Workflow",
-    description: "Clean messy records, automate exploration, and build repeatable analysis steps.",
+    title: "Cloud Workflow",
+    description: "Support modern data work with tools like AWS, Airflow, Glue, and platform-ready pipelines.",
     icon: Sparkles
   },
   {
     title: "Business Storytelling",
-    description: "Present the signal, not the noise, so stakeholders know what to do next.",
+    description: "Translate analysis, dashboards, and AI-assisted workflows into decisions people can act on.",
     icon: LineChart
   }
 ];
@@ -33,13 +33,13 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="eyebrow">Recruiter-Focused Data Analyst Portfolio</span>
+          <span className="eyebrow">Recruiter-Focused Data Science Portfolio</span>
           <h1 className="mt-8 max-w-4xl font-display text-5xl font-semibold leading-[0.95] text-foreground sm:text-6xl lg:text-7xl">
             I turn <span className="text-gradient">messy data</span> into business decisions.
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-            Data analyst focused on SQL, Python, exploratory analysis, and dashboards that help
-            teams move from raw exports to clear next steps with confidence.
+            Junior Data Scientist focused on SQL, Python, business intelligence, and cloud-backed
+            data workflows that help teams move from messy raw data to confident decisions.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -55,7 +55,7 @@ export function HeroSection() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3 text-sm text-muted-foreground">
-            {["SQL Analysis", "Python Automation", "Power BI Dashboards", "Insight-Led Decisions"].map(
+            {["SQL & Python", "Power BI Dashboards", "AWS & Airflow", "Generative AI Workflows"].map(
               (item) => (
                 <div
                   key={item}

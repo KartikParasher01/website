@@ -20,11 +20,11 @@ export type Project = {
 };
 
 export const siteConfig = {
-  name: "Your Name",
-  role: "Data Analyst",
-  email: "hello@yourmail.com",
-  linkedin: "https://www.linkedin.com/in/yourname",
-  github: "https://github.com/yourusername"
+  name: "Kartik Parasher",
+  role: "Junior Data Scientist",
+  email: "kartikparasher2001@gmail.com",
+  linkedin: "https://www.linkedin.com/in/kartikparasher",
+  github: "https://github.com/KartikParasher01"
 };
 
 export const navItems = [
@@ -36,7 +36,7 @@ export const navItems = [
 ];
 
 export const aboutSummary =
-  "I turn noisy spreadsheets, raw SQL tables, and loosely defined business questions into analysis that leaders can actually use. My workflow combines Python for cleaning and exploration, SQL for precision, and dashboards for fast decision-making. I care most about spotting what matters, explaining it clearly, and making insights actionable.";
+  "I am a Junior Data Scientist focused on turning raw business data into insights that teams can actually use. My work blends Python, SQL, dashboards, and cloud data tools to solve practical reporting and analysis problems. After a 6-month Trainee Data Scientist internship at TradeIndia, I am now continuing there on probation while expanding my skills in AWS, Airflow, Glue, Azure, and Generative AI. I care about making analysis clear, actionable, and grounded in business impact.";
 
 export const aboutHighlights = [
   {
@@ -206,30 +206,30 @@ export const skillGroups = [
   {
     title: "Visualization",
     items: ["Dashboard Design", "EDA", "Seaborn", "Business Storytelling"]
+  },
+  {
+    title: "Cloud & AI",
+    items: [
+      "AWS",
+      "AWS Glue",
+      "Apache Airflow",
+      "Azure",
+      "Generative AI",
+      "Prompt Engineering"
+    ]
   }
 ];
 
 export const experiences = [
   {
     company: "TradeIndia",
-    role: "Data Analyst Intern",
-    period: "Internship Experience",
+    role: "Trainee Data Scientist -> Probation",
+    period: "6-Month Internship And Current Probation",
     impact:
-      "Turned fragmented marketplace and campaign data into cleaner reporting views that made supplier and lead performance easier to evaluate.",
+      "Completed a 6-month Trainee Data Scientist internship at TradeIndia and now continue on probation, working across analysis, reporting, and evolving data workflows.",
     outcomes: [
-      "Reduced manual reporting effort by structuring recurring datasets into reusable tables and analysis-ready summaries.",
-      "Helped surface stronger-performing categories and lead quality patterns so stakeholders could focus on higher-intent segments faster."
-    ]
-  },
-  {
-    company: "Tata Steel",
-    role: "Data Analyst Intern",
-    period: "Internship Experience",
-    impact:
-      "Worked with operational data to highlight patterns that supported clearer plant-level monitoring and faster root-cause discussions.",
-    outcomes: [
-      "Converted scattered operational logs into more usable reporting formats for trend analysis and day-to-day review.",
-      "Used data exploration to identify recurring production or quality patterns, helping teams prioritize where deeper investigation was needed."
+      "Worked with business data to make reporting cleaner, more usable, and easier for teams to review consistently.",
+      "Built hands-on experience with Python, SQL, BI tooling, and emerging cloud and AI workflows while supporting practical analytics needs."
     ]
   }
 ];
@@ -242,12 +242,12 @@ export const contactLinks = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/yourname",
+    value: "linkedin.com/in/kartikparasher",
     href: siteConfig.linkedin
   },
   {
     label: "GitHub",
-    value: "github.com/yourusername",
+    value: "github.com/KartikParasher01",
     href: siteConfig.github
   }
 ];

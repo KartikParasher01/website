@@ -9,6 +9,12 @@ import { navItems, siteConfig } from "@/data/portfolio";
 
 export function SiteNavbar() {
   const [open, setOpen] = useState(false);
+  const initials = siteConfig.name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
@@ -17,7 +23,7 @@ export function SiteNavbar() {
           <div className="flex items-center justify-between gap-4">
             <Link href="/" className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 bg-primary/10 font-display text-sm font-semibold text-primary">
-                DA
+                {initials}
               </div>
               <div>
                 <p className="font-display text-sm font-semibold text-foreground">
