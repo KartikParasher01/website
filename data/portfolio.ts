@@ -2,6 +2,7 @@ export type Project = {
   slug: string;
   title: string;
   category: string;
+  repoUrl: string;
   shortDescription: string;
   spotlight: string;
   tools: string[];
@@ -66,6 +67,7 @@ export const projects: Project[] = [
     slug: "india-road-accident-analysis",
     title: "India Road Accident Analysis",
     category: "Public Safety Analytics",
+    repoUrl: "https://github.com/KartikParasher01/IndiaRoadAccidentAnalysis",
     shortDescription:
       "Analyzed accident severity patterns across time, road types, and vehicle categories to show where prevention efforts should focus first.",
     spotlight:
@@ -108,6 +110,7 @@ export const projects: Project[] = [
     slug: "spotify-dashboard",
     title: "Spotify Dashboard (Power BI)",
     category: "Consumer Media Analytics",
+    repoUrl: "https://github.com/KartikParasher01/spotify-stream-analysis",
     shortDescription:
       "Designed an interactive Power BI dashboard to explore artist performance, track popularity, and audio-feature trends in one recruiter-friendly view.",
     spotlight:
@@ -150,6 +153,7 @@ export const projects: Project[] = [
     slug: "sql-music-store-analysis",
     title: "SQL Music Store Analysis",
     category: "Revenue and Customer Analytics",
+    repoUrl: "https://github.com/KartikParasher01/SQL_Music_Store_analysis",
     shortDescription:
       "Used SQL to answer business questions around top customers, genre performance, market concentration, and overall revenue drivers in a music store dataset.",
     spotlight:

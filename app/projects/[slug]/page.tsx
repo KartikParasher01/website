@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Github } from "lucide-react";
 
 import { Reveal } from "@/components/shared/reveal";
 import { Badge } from "@/components/ui/badge";
@@ -51,9 +52,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </p>
             </div>
 
-            <Button asChild variant="secondary" size="lg">
-              <Link href="/#contact">Start A Conversation</Link>
-            </Button>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild size="lg">
+                <Link href={project.repoUrl} rel="noreferrer" target="_blank">
+                  <Github className="h-4 w-4" />
+                  View On GitHub
+                </Link>
+              </Button>
+              <Button asChild variant="secondary" size="lg">
+                <Link href="/#contact">Start A Conversation</Link>
+              </Button>
+            </div>
           </div>
         </Reveal>
 

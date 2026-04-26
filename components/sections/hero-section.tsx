@@ -35,7 +35,8 @@ export function HeroSection() {
         >
           <span className="eyebrow">Recruiter-Focused Data Science Portfolio</span>
           <h1 className="mt-8 max-w-4xl font-display text-5xl font-semibold leading-[0.95] text-foreground sm:text-6xl lg:text-7xl">
-            I turn <span className="text-gradient">messy data</span> into business decisions.
+            <span className="text-gradient">SQL, Python, BI,</span> and cloud workflows for
+            smarter decisions.
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
             Junior Data Scientist focused on SQL, Python, business intelligence, and cloud-backed
@@ -56,13 +57,20 @@ export function HeroSection() {
 
           <div className="mt-10 flex flex-wrap gap-3 text-sm text-muted-foreground">
             {["SQL & Python", "Power BI Dashboards", "AWS & Airflow", "Generative AI Workflows"].map(
-              (item) => (
-                <div
+              (item, index) => (
+                <motion.div
                   key={item}
+                  animate={{ opacity: 1, y: 0 }}
                   className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2"
+                  initial={{ opacity: 0, y: 14 }}
+                  transition={{
+                    duration: 0.45,
+                    delay: 0.32 + index * 0.08,
+                    ease: [0.16, 1, 0.3, 1]
+                  }}
                 >
                   {item}
-                </div>
+                </motion.div>
               )
             )}
           </div>

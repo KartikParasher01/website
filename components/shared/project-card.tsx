@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 
 import type { Project } from "@/data/portfolio";
 
@@ -32,13 +32,23 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <p className="text-xs uppercase tracking-[0.24em] text-primary/80">
                 {project.category}
               </p>
-              <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">
+              <Link
+                className="mt-3 block font-display text-2xl font-semibold text-foreground transition-colors hover:text-primary"
+                href={project.repoUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
                 {project.title}
-              </h3>
+              </Link>
             </div>
-            <div className="rounded-full border border-primary/20 bg-primary/10 p-2 text-primary transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+            <Link
+              className="rounded-full border border-primary/20 bg-primary/10 p-2 text-primary transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+              href={project.repoUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
               <ArrowUpRight className="h-4 w-4" />
-            </div>
+            </Link>
           </div>
 
           <p className="mt-5 text-base leading-7 text-muted-foreground">
@@ -67,9 +77,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             ))}
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild>
+              <Link href={project.repoUrl} rel="noreferrer" target="_blank">
+                <Github className="h-4 w-4" />
+                GitHub Repo
+              </Link>
+            </Button>
             <Button asChild variant="secondary">
-              <Link href={`/projects/${project.slug}`}>View Case Study</Link>
+              <Link href={`/projects/${project.slug}`}>Read Case Study</Link>
             </Button>
           </div>
         </CardContent>
