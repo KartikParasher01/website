@@ -8,18 +8,18 @@ import { Button } from "@/components/ui/button";
 
 const workflowCards = [
   {
-    title: "SQL Precision",
-    description: "Turn large tables into focused answers with clean joins, filters, and ranking logic.",
+    title: "ETL & PySpark",
+    description: "Build scalable data workflows for validation, deduplication, matching, and large-scale processing.",
     icon: Database
   },
   {
-    title: "Cloud Workflow",
-    description: "Support modern data work with tools like AWS, Airflow, Glue, and platform-ready pipelines.",
+    title: "Orchestration & Cloud",
+    description: "Automate recurring workflows with Airflow, AWS Glue, AWS S3, and Azure Batch services.",
     icon: Sparkles
   },
   {
-    title: "Business Storytelling",
-    description: "Translate analysis, dashboards, and AI-assisted workflows into decisions people can act on.",
+    title: "APIs & GenAI",
+    description: "Turn embeddings, search, and AI-assisted data workflows into practical business-facing solutions.",
     icon: LineChart
   }
 ];
@@ -35,12 +35,13 @@ export function HeroSection() {
         >
           <span className="eyebrow">Recruiter-Focused Data Science Portfolio</span>
           <h1 className="mt-8 max-w-4xl font-display text-5xl font-semibold leading-[0.95] text-foreground sm:text-6xl lg:text-7xl">
-            <span className="text-gradient">SQL, Python, BI,</span> and cloud workflows for
-            smarter decisions.
+            <span className="text-gradient">Data pipelines, PySpark,</span> and AI workflows for
+            scalable business solutions.
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-            Junior Data Scientist focused on SQL, Python, business intelligence, and cloud-backed
-            data workflows that help teams move from messy raw data to confident decisions.
+            Junior Data Scientist building across ETL, PySpark, SQL, Airflow, APIs, cloud
+            tooling, and Generative AI workflows to make data products more reliable, scalable,
+            and useful.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -56,8 +57,13 @@ export function HeroSection() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3 text-sm text-muted-foreground">
-            {["SQL & Python", "Power BI Dashboards", "AWS & Airflow", "Generative AI Workflows"].map(
-              (item, index) => (
+            {[
+              "ETL & Data Quality",
+              "PySpark & SQL",
+              "Airflow & AWS Glue",
+              "APIs & Vector Search",
+              "Generative AI Workflows"
+            ].map((item, index) => (
                 <motion.div
                   key={item}
                   animate={{ opacity: 1, y: 0 }}
@@ -88,7 +94,7 @@ export function HeroSection() {
             <div className="relative">
               <div className="rounded-[28px] border border-white/10 bg-black/20 p-5">
                 <p className="text-xs uppercase tracking-[0.24em] text-primary/80">
-                  Analyst Workflow
+                  Hybrid Data & AI Workflow
                 </p>
                 <div className="mt-6 grid gap-4">
                   {workflowCards.map((card, index) => {
@@ -130,8 +136,8 @@ export function HeroSection() {
                 className="mt-5 ml-auto max-w-xs rounded-3xl border border-primary/20 bg-primary/10 p-5 text-sm text-primary shadow-glow"
                 transition={{ duration: 5.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
               >
-                Built to help recruiters scan impact fast: problem, approach, insight, and business
-                outcome in one clean flow.
+                Built to show recruiter-ready depth across engineering, orchestration, analytics,
+                and practical AI workflows in one clean scan.
               </motion.div>
             </div>
           </div>

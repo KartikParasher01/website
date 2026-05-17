@@ -20,6 +20,27 @@ export type Project = {
   };
 };
 
+export type Experience = {
+  company: string;
+  role: string;
+  period: string;
+  impact: string;
+  outcomes: string[];
+};
+
+export type Education = {
+  institution: string;
+  credential: string;
+  period: string;
+  location: string;
+  detail: string;
+};
+
+export type Certification = {
+  title: string;
+  issuer: string;
+};
+
 export const siteConfig = {
   name: "Kartik Parasher",
   role: "Junior Data Scientist",
@@ -30,35 +51,36 @@ export const siteConfig = {
 
 export const navItems = [
   { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
   { label: "Projects", href: "/#projects" },
   { label: "Skills", href: "/#skills" },
-  { label: "Experience", href: "/#experience" },
+  { label: "Credentials", href: "/#credentials" },
   { label: "Contact", href: "/#contact" }
 ];
 
 export const aboutSummary =
-  "I am a Junior Data Scientist focused on turning raw business data into insights that teams can actually use. My work blends Python, SQL, dashboards, and cloud data tools to solve practical reporting and analysis problems. After a 6-month Trainee Data Scientist internship at TradeIndia, I am now continuing there on probation while expanding my skills in AWS, Airflow, Glue, Azure, and Generative AI. I care about making analysis clear, actionable, and grounded in business impact.";
+  "I am a Junior Data Scientist building at the intersection of analytics, data engineering, and AI workflows. My work combines Python, PySpark, SQL, ETL pipelines, orchestration, and cloud tooling to turn raw business data into production-ready outputs. At TradeIndia, I have worked on deduplication pipelines, workflow automation, vector-search APIs, and Generative AI use cases with a strong focus on scale, data quality, and business impact. I enjoy turning complex data problems into reliable systems and clear decisions.";
 
 export const aboutHighlights = [
   {
-    title: "Python",
-    description: "Automate cleaning, exploration, and repeatable analysis without living in manual spreadsheets."
+    title: "ETL Pipelines",
+    description: "Build and automate data preparation flows focused on validation, deduplication, and matching for reliable downstream use."
   },
   {
-    title: "SQL",
-    description: "Write focused queries that surface trends, anomalies, and revenue drivers quickly."
+    title: "PySpark",
+    description: "Process and transform larger datasets with scalable Python-first workflows built for production-style data work."
   },
   {
-    title: "Power BI",
-    description: "Translate analysis into recruiter-friendly dashboards and stakeholder-ready stories."
+    title: "Airflow & Cloud",
+    description: "Orchestrate recurring jobs with Apache Airflow and cloud services like AWS Glue, AWS S3, and Azure Batch."
   },
   {
-    title: "Data Cleaning",
-    description: "Standardize messy fields, fix quality issues, and create reliable datasets for reporting."
+    title: "APIs & Search",
+    description: "Develop API-backed data applications, including vector search workflows using FastAPI and modern embedding stacks."
   },
   {
-    title: "EDA",
-    description: "Use exploratory analysis to uncover patterns before building a dashboard or making a recommendation."
+    title: "Generative AI",
+    description: "Apply AI workflows to keyword generation, discoverability, and practical business use cases grounded in real data systems."
   }
 ];
 
@@ -69,40 +91,40 @@ export const projects: Project[] = [
     category: "Public Safety Analytics",
     repoUrl: "https://github.com/KartikParasher01/IndiaRoadAccidentAnalysis",
     shortDescription:
-      "Analyzed accident severity patterns across time, road types, and vehicle categories to show where prevention efforts should focus first.",
+      "Analyzed 12,000+ accident records to uncover high-risk driver segments, peak accident periods, and behavior patterns that could support targeted safety interventions.",
     spotlight:
-      "Night-time incidents were fewer than daytime incidents, but they consistently carried higher severity across major road corridors.",
+      "Trend analysis showed the 18-50 age group and weekends as strong risk indicators, helping narrow where prevention messaging and safety action should focus.",
     tools: ["Python", "Pandas", "Seaborn", "Excel"],
     previewPoints: [
-      "Compared accident severity by road class, vehicle type, and time-of-day.",
-      "Built a clean exploratory workflow that turned raw records into intervention-ready insights."
+      "Cleaned and standardized a 12,000+ row accident dataset for reliable exploratory analysis.",
+      "Compared severity by driver age, timing, and accident patterns to produce policy-ready recommendations."
     ],
     metrics: [
-      { label: "Dataset", value: "Accident-level records" },
-      { label: "Primary Goal", value: "Severity hotspot detection" },
+      { label: "Dataset", value: "12,000+ accident records" },
+      { label: "Primary Goal", value: "High-risk segment detection" },
       { label: "Output", value: "EDA-driven insight deck" }
     ],
     caseStudy: {
       problemStatement:
-        "Raw road accident data can be overwhelming because counts alone do not show where the most severe incidents happen or which conditions consistently increase risk. The goal was to move from raw incidents to a practical view of severity drivers.",
+        "Raw accident data often shows volume but not where the most actionable risk patterns lie. The goal was to turn a large accident dataset into a view of which age groups, time patterns, and behaviors deserved the most attention from a road-safety perspective.",
       datasetDescription:
-        "The analysis used structured accident records covering geography, road category, vehicle involvement, timing, and severity indicators. The data needed cleaning for category consistency and easier comparison across dimensions.",
+        "The project used a dataset of 12,000+ accident records with fields related to age, timing, and severity. The data needed cleaning and standardization before it could support trustworthy trend comparisons.",
       approach: [
-        "Cleaned and standardized categorical fields in Python so state, road-type, and vehicle labels could be compared reliably.",
-        "Performed exploratory analysis on severity distribution, time patterns, and accident concentration across categories.",
-        "Used grouped summaries and visual comparisons to isolate combinations with the highest share of severe accidents.",
-        "Translated the findings into a clear narrative aimed at safety planning rather than raw descriptive reporting."
+        "Cleaned and standardized the accident records in Python so trend analysis was based on consistent categories.",
+        "Performed exploratory analysis across age groups, timing, and accident concentration to detect risk-heavy segments.",
+        "Used grouped summaries and visual comparisons to isolate patterns tied to higher-risk driver cohorts and periods.",
+        "Converted the findings into a story focused on safety action, not just descriptive reporting."
       ],
       keyInsights: [
-        "National highways and dense urban corridors showed a disproportionate share of high-severity accidents compared with lower-traffic road classes.",
-        "Late evening and night windows were not always the highest by volume, but they were consistently stronger risk periods for severe incidents.",
-        "Two-wheelers and pedestrian-related collisions repeatedly surfaced among the most vulnerable scenarios.",
-        "Location-level comparison worked better than national averages for highlighting where targeted action would matter most."
+        "The 18-50 age group emerged as the strongest high-risk driver segment in the dataset.",
+        "Weekend patterns showed elevated risk, making them more actionable than daily averages alone.",
+        "Peak accident periods became easier to isolate after cleaning and standardizing the raw records.",
+        "The project showed how simple but disciplined EDA can produce targeted safety recommendations from public data."
       ],
       businessImpact: [
-        "Created a stronger basis for hotspot-first road safety interventions instead of broad, low-priority responses.",
-        "Helped frame decisions around lighting, signage, enforcement, and awareness campaigns by risk profile rather than intuition.",
-        "Demonstrated the ability to turn a public dataset into a decision-ready analysis with clear prioritization."
+        "Supported targeted safety interventions by identifying where risk was concentrated instead of treating all segments equally.",
+        "Provided clearer evidence for focused awareness and policy recommendations around high-risk age groups and periods.",
+        "Demonstrated the ability to turn a 12,000+ row dataset into prioritized, decision-ready insight."
       ]
     }
   },
@@ -112,40 +134,40 @@ export const projects: Project[] = [
     category: "Consumer Media Analytics",
     repoUrl: "https://github.com/KartikParasher01/spotify-stream-analysis",
     shortDescription:
-      "Designed an interactive Power BI dashboard to explore artist performance, track popularity, and audio-feature trends in one recruiter-friendly view.",
+      "Developed an interactive Power BI dashboard to analyze top-streamed songs, artist performance, and track-level listening trends in a clear, recruiter-friendly format.",
     spotlight:
-      "Track popularity was shaped by a mix of release recency and audio profile, but a few artists captured a heavily concentrated share of attention.",
+      "The dashboard translated raw streaming data into an easy-to-scan story around top songs, artist reach, and reporting-ready music trends.",
     tools: ["Power BI", "Power Query", "DAX", "Excel"],
     previewPoints: [
-      "Modeled track-level music data into a clean, filterable dashboard with executive-style KPIs.",
-      "Used DAX measures to compare artist reach, genre performance, and popularity trends over time."
+      "Cleaned and transformed streaming data in Power Query for accurate reporting and comparison.",
+      "Designed a user-friendly dashboard layout with calculated columns and visuals that improved storytelling."
     ],
     metrics: [
-      { label: "Dataset", value: "Track and artist metadata" },
-      { label: "Primary Goal", value: "Trend and performance monitoring" },
+      { label: "Dataset", value: "Top-streamed song data" },
+      { label: "Primary Goal", value: "Artist and song performance analysis" },
       { label: "Output", value: "Interactive Power BI dashboard" }
     ],
     caseStudy: {
       problemStatement:
-        "Large entertainment datasets are difficult to scan without a dashboard that lets users compare artists, genres, and track characteristics quickly. The goal was to turn raw track data into a story-driven dashboard that made music trends easy to evaluate.",
+        "Streaming data can be difficult to understand without a reporting layer that clearly surfaces which songs and artists are performing best. The goal was to build a dashboard that made top-stream trends easy to explore and present.",
       datasetDescription:
-        "The dataset contained track attributes such as popularity, release details, artist names, genre-like groupings, and audio features including danceability, energy, and tempo. It was suited for dimensional modeling and KPI design in Power BI.",
+        "The dataset included top-streamed songs, artist-level information, and fields that could be transformed into performance and trend views. It was cleaned and prepared in Power Query before dashboard design.",
       approach: [
-        "Cleaned the raw file in Power Query and prepared consistent artist, release-year, and audio-feature fields.",
-        "Built a simple star-style model to support slicers, trend views, and reusable DAX measures.",
-        "Created KPIs and comparison visuals for popularity, artist concentration, feature distribution, and release patterns.",
-        "Focused the layout on quick scanning so a recruiter or stakeholder could understand the dashboard within seconds."
+        "Performed data cleaning and transformation in Power Query to improve consistency and reporting accuracy.",
+        "Created custom calculated columns and structured the data for easy slicing and comparison in Power BI.",
+        "Designed visuals around top-streamed songs, artist performance, and trend discovery rather than raw tables.",
+        "Used layout and presentation thinking to make the dashboard easy to scan and explain."
       ],
       keyInsights: [
-        "Popularity was concentrated among a relatively small set of artists, which made artist-level comparison more valuable than average track views alone.",
-        "Recent releases often gained stronger visibility, but audio profile still influenced which tracks sustained attention.",
-        "High-energy and danceable tracks appeared frequently among top-performing segments, suggesting a strong relationship between listenability and reach.",
-        "A well-structured dashboard made it much easier to move from curiosity to specific drill-down questions."
+        "Artist-level comparison surfaced performance concentration more clearly than raw track tables alone.",
+        "Top-stream analysis became more intuitive once the raw dataset was transformed into a dashboard-first structure.",
+        "Calculated fields and interaction design improved the story the dashboard could tell, not just the visuals it displayed.",
+        "The project highlighted the importance of layout and transformation in making BI outputs useful."
       ],
       businessImpact: [
-        "Showed how dashboard design can compress a broad entertainment dataset into a fast, self-serve decision layer.",
-        "Created an example of stakeholder-friendly reporting where filters, KPIs, and visuals answer different levels of questions cleanly.",
-        "Highlighted strong Power BI fundamentals: modeling, DAX thinking, visual hierarchy, and interaction design."
+        "Created a cleaner self-serve reporting experience around streaming performance and artist trends.",
+        "Demonstrated practical Power BI skills across Power Query, calculated columns, interaction design, and presentation clarity.",
+        "Showed the ability to transform raw data into an accessible dashboard story for non-technical viewers."
       ]
     }
   },
@@ -196,45 +218,126 @@ export const projects: Project[] = [
 
 export const skillGroups = [
   {
-    title: "Programming",
-    items: ["Python", "Pandas", "NumPy", "Jupyter Notebook"]
+    title: "Programming & Processing",
+    items: ["Python", "PySpark", "Pandas", "NumPy", "Jupyter Notebook"]
   },
   {
-    title: "Tools",
-    items: ["Power BI", "Excel", "Power Query", "Git"]
+    title: "Data Engineering",
+    items: ["ETL Pipelines", "Data Validation", "Deduplication", "Data Matching", "FastAPI"]
   },
   {
-    title: "Databases",
-    items: ["SQL", "PostgreSQL", "MySQL", "Relational Modeling"]
+    title: "Databases & Search",
+    items: ["SQL", "PostgreSQL", "MySQL", "BigQuery", "Pinecone"]
   },
   {
-    title: "Visualization",
-    items: ["Dashboard Design", "EDA", "Seaborn", "Business Storytelling"]
+    title: "Cloud & Orchestration",
+    items: ["Apache Airflow", "AWS Glue", "AWS S3", "Azure Batch", "Azure OpenAI"]
   },
   {
-    title: "Cloud & AI",
+    title: "Reporting & BI",
     items: [
-      "AWS",
-      "AWS Glue",
-      "Apache Airflow",
-      "Azure",
+      "Power BI",
+      "Power Query",
+      "MS Excel (Advanced)",
+      "EDA",
+      "Business Storytelling"
+    ]
+  },
+  {
+    title: "Tools & AI Workflows",
+    items: [
+      "GitHub",
+      "Google Sheets",
+      "ChatGPT",
       "Generative AI",
-      "Prompt Engineering"
+      "Elastic APM",
+      "PowerPoint"
     ]
   }
 ];
 
-export const experiences = [
+export const experiences: Experience[] = [
   {
     company: "TradeIndia",
-    role: "Trainee Data Scientist -> Probation",
-    period: "6-Month Internship And Current Probation",
+    role: "Junior Data Scientist",
+    period: "Feb 2026 - Present",
     impact:
-      "Completed a 6-month Trainee Data Scientist internship at TradeIndia and now continue on probation, working across analysis, reporting, and evolving data workflows.",
+      "Build production-facing data and AI workflows that improve data quality, automate recurring processes, and support search, discoverability, and stakeholder delivery.",
     outcomes: [
-      "Worked with business data to make reporting cleaner, more usable, and easier for teams to review consistently.",
-      "Built hands-on experience with Python, SQL, BI tooling, and emerging cloud and AI workflows while supporting practical analytics needs."
+      "Designed and deployed an ETL-based deduplication pipeline using Python and PySpark to process and match large-scale B2B datasets.",
+      "Automated recurring workflows with Apache Airflow, AWS Glue, and Azure Batch to improve scalability and reduce manual effort.",
+      "Developed FastAPI-based vector search APIs using Azure OpenAI embeddings, Pinecone, PostgreSQL, and Elastic APM.",
+      "Implemented Generative AI long-tail keyword generation workflows to improve product discoverability and search relevance.",
+      "Collaborated with stakeholders on data extraction requests and delivered production-ready data solutions."
     ]
+  },
+  {
+    company: "TradeIndia",
+    role: "Intern - Trainee Data Science",
+    period: "Aug 2025 - Feb 2026",
+    impact:
+      "Built a strong foundation in data quality, segmentation, and recurring workflow support while working on practical business analytics problems.",
+    outcomes: [
+      "Identified data quality gaps affecting sales targeting through exploratory analysis, enabling more accurate customer segmentation.",
+      "Supported lead categorization by tagging profiles based on industry, product relevance, and activity indicators.",
+      "Assisted in automating recurring data-preparation workflows with exposure to AWS S3 and Apache Airflow."
+    ]
+  },
+  {
+    company: "Tata Steel Limited",
+    role: "Intern - RDE Norms Analysis Project",
+    period: "May 2023 - Jul 2023",
+    impact:
+      "Analyzed market and product implications of changing emission norms to support commercial understanding and strategy discussions.",
+    outcomes: [
+      "Analyzed the impact of emission norms on product demand to identify shifts in customer preference.",
+      "Evaluated product alignment with regulatory changes to uncover potential market opportunities.",
+      "Generated insights that supported sales strategy by identifying segments with approximately 10% growth potential."
+    ]
+  }
+];
+
+export const education: Education[] = [
+  {
+    institution: "Birla Institute of Technology",
+    credential: "Bachelor of Business Administration",
+    period: "2021 - 2024",
+    location: "Ranchi, India",
+    detail: "Cumulative GPA: 7.29"
+  },
+  {
+    institution: "Vivek Vidyalaya",
+    credential: "Central Board of Secondary Education (CBSE)",
+    period: "2019 - 2021",
+    location: "Jamshedpur, India",
+    detail: "Senior secondary education"
+  }
+];
+
+export const certificationsOrTraining: Certification[] = [
+  {
+    title: "Data Analytics (Python, SQL, Power BI, Excel)",
+    issuer: "PW Skills"
+  },
+  {
+    title: "SQL Intermediate",
+    issuer: "HackerRank"
+  },
+  {
+    title: "Excel for Data Analysis",
+    issuer: "LinkedIn"
+  },
+  {
+    title: "Business Analytics & Decision Making",
+    issuer: "BIT Mesra"
+  },
+  {
+    title: "Data Visualization Job Simulations",
+    issuer: "Tata, Accenture, and Deloitte"
+  },
+  {
+    title: "Product Management",
+    issuer: "Udemy"
   }
 ];
 

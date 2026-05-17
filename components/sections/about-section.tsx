@@ -16,7 +16,7 @@ export function AboutSection() {
         <Reveal>
           <SectionHeading
             eyebrow="About"
-            title="Analytical thinking with business-first communication"
+            title="A hybrid profile across data engineering, analytics, and AI"
             description={aboutSummary}
           />
         </Reveal>

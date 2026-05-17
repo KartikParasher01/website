@@ -12,12 +12,12 @@ export function ExperienceSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Experience"
-            title="Experience shaped by real business data work"
-            description="This section focuses on measurable analytical growth, practical reporting work, and the tools I have been building with in a live business environment."
+            title="Production-facing work across data quality, pipelines, and AI"
+            description="These roles show hands-on experience across ETL, orchestration, segmentation, vector search, and business-facing delivery in real environments."
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-1">
+        <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
           {experiences.map((experience, index) => (
             <Reveal delay={0.08 * index} key={experience.company}>
               <HoverPanel delay={0.02 * index}>

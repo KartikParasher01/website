@@ -12,7 +12,7 @@ export function ProjectsSection() {
           <SectionHeading
             eyebrow="Projects"
             title="Case studies that show how the analysis leads to action"
-            description="These projects are written for recruiters and hiring managers: each one frames the problem, explains the dataset and approach, then lands on the insight and business impact."
+            description="These projects complement the experience section by showing how I structure analysis, dashboards, and SQL problem-solving into recruiter-friendly case studies."
           />
         </Reveal>
 

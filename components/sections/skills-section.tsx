@@ -13,12 +13,12 @@ export function SkillsSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Skills"
-            title="The stack behind my analysis workflow"
-            description="A growing toolkit across programming, data platforms, dashboards, cloud workflows, and practical AI-enabled problem solving."
+            title="The stack behind my data and AI workflow"
+            description="A practical toolkit spanning data processing, ETL, orchestration, APIs, cloud services, reporting, and applied Generative AI."
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {skillGroups.map((group, index) => (
             <Reveal delay={0.08 * index} key={group.title}>
               <HoverPanel delay={0.02 * index}>

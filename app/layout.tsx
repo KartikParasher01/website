@@ -21,7 +21,7 @@ const display = Space_Grotesk({
 export const metadata: Metadata = {
   title: `${siteConfig.name} | Data Science Portfolio`,
   description:
-    "Recruiter-focused data science portfolio built with Next.js, Tailwind CSS, Framer Motion, and shadcn/ui-inspired components."
+    "Recruiter-focused data science portfolio highlighting ETL, PySpark, Airflow, APIs, cloud workflows, and practical Generative AI experience."
 };
 
 export default function RootLayout({
