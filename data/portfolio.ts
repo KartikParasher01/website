@@ -59,7 +59,7 @@ export const navItems = [
 ];
 
 export const aboutSummary =
-  "I am a Junior Data Scientist building at the intersection of analytics, data engineering, and AI workflows. My work combines Python, PySpark, SQL, ETL pipelines, orchestration, and cloud tooling to turn raw business data into production-ready outputs. At TradeIndia, I have worked on deduplication pipelines, workflow automation, vector-search APIs, and Generative AI use cases with a strong focus on scale, data quality, and business impact. I enjoy turning complex data problems into reliable systems and clear decisions.";
+  "I am a Junior Data Scientist building at the intersection of analytics, data engineering, and AI workflows. My work combines Python, PySpark, SQL, ETL pipelines, orchestration, and cloud tooling to turn raw business data into production-ready outputs. At TradeIndia, I have worked on deduplication pipelines, workflow automation, vector-search APIs, and Generative AI use cases with a strong focus on scale, data quality, and business impact. I enjoy using PySpark and workflow automation to turn complex data problems into reliable systems and clear decisions.";
 
 export const aboutHighlights = [
   {
@@ -219,7 +219,7 @@ export const projects: Project[] = [
 export const skillGroups = [
   {
     title: "Programming & Processing",
-    items: ["Python", "PySpark", "Pandas", "NumPy", "Jupyter Notebook"]
+    items: ["Python", "PySpark", "Pandas", "NumPy"]
   },
   {
     title: "Data Engineering",
@@ -265,10 +265,12 @@ export const experiences: Experience[] = [
       "Build production-facing data and AI workflows that improve data quality, automate recurring processes, and support search, discoverability, and stakeholder delivery.",
     outcomes: [
       "Designed and deployed an ETL-based deduplication pipeline using Python and PySpark to process and match large-scale B2B datasets.",
+      "Improved data quality and matching reliability by combining ETL validation steps with scalable record-comparison logic.",
       "Automated recurring workflows with Apache Airflow, AWS Glue, and Azure Batch to improve scalability and reduce manual effort.",
       "Developed FastAPI-based vector search APIs using Azure OpenAI embeddings, Pinecone, PostgreSQL, and Elastic APM.",
       "Implemented Generative AI long-tail keyword generation workflows to improve product discoverability and search relevance.",
-      "Collaborated with stakeholders on data extraction requests and delivered production-ready data solutions."
+      "Collaborated with stakeholders on data extraction requests and delivered production-ready data solutions.",
+      "Worked across orchestration, APIs, and analytics workflows to move solutions closer to production use rather than one-off analysis."
     ]
   },
   {
@@ -280,7 +282,8 @@ export const experiences: Experience[] = [
     outcomes: [
       "Identified data quality gaps affecting sales targeting through exploratory analysis, enabling more accurate customer segmentation.",
       "Supported lead categorization by tagging profiles based on industry, product relevance, and activity indicators.",
-      "Assisted in automating recurring data-preparation workflows with exposure to AWS S3 and Apache Airflow."
+      "Assisted in automating recurring data-preparation workflows with exposure to AWS S3 and Apache Airflow.",
+      "Worked on recurring business datasets that improved the usability of sales and profile information for downstream review and action."
     ]
   },
   {
@@ -292,7 +295,8 @@ export const experiences: Experience[] = [
     outcomes: [
       "Analyzed the impact of emission norms on product demand to identify shifts in customer preference.",
       "Evaluated product alignment with regulatory changes to uncover potential market opportunities.",
-      "Generated insights that supported sales strategy by identifying segments with approximately 10% growth potential."
+      "Generated insights that supported sales strategy by identifying segments with approximately 10% growth potential.",
+      "Translated regulatory trend analysis into decision-support findings for commercial and market-focused discussion."
     ]
   }
 ];

@@ -17,7 +17,7 @@ export function ExperienceSection() {
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-12 grid gap-5 lg:grid-cols-1">
           {experiences.map((experience, index) => (
             <Reveal delay={0.08 * index} key={experience.company}>
               <HoverPanel delay={0.02 * index}>

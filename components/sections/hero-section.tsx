@@ -39,7 +39,7 @@ export function HeroSection() {
             scalable business solutions.
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-            Junior Data Scientist building across ETL, PySpark, SQL, Airflow, APIs, cloud
+            Junior Data Scientist building across PySpark, ETL, SQL, Airflow, APIs, cloud
             tooling, and Generative AI workflows to make data products more reliable, scalable,
             and useful.
           </p>
