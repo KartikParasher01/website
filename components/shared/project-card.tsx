@@ -21,7 +21,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       initial={{ opacity: 0, y: 24 }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.08 * index }}
       viewport={{ amount: 0.15, once: true }}
-      whileHover={{ y: -8 }}
+      whileHover={{ scale: 1.015, y: -8 }}
       whileInView={{ opacity: 1, y: 0 }}
     >
       <Card className="group relative h-full overflow-hidden transition-colors duration-300 hover:border-primary/30">
@@ -54,6 +54,22 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <p className="mt-5 text-base leading-7 text-muted-foreground">
             {project.shortDescription}
           </p>
+
+          <div className="mt-6 grid gap-2">
+            {project.metrics.map((metric) => (
+              <div
+                className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3"
+                key={`${project.slug}-${metric.label}`}
+              >
+                <span className="text-[0.68rem] uppercase tracking-[0.2em] text-muted-foreground">
+                  {metric.label}
+                </span>
+                <span className="text-right text-sm font-semibold text-foreground">
+                  {metric.value}
+                </span>
+              </div>
+            ))}
+          </div>
 
           <div className="mt-6 rounded-3xl border border-white/10 bg-background/50 p-5">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Spotlight</p>

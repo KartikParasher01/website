@@ -24,7 +24,12 @@ export type Experience = {
   company: string;
   role: string;
   period: string;
+  location: string;
   impact: string;
+  metrics: {
+    label: string;
+    value: string;
+  }[];
   outcomes: string[];
 };
 
@@ -39,6 +44,12 @@ export type Education = {
 export type Certification = {
   title: string;
   issuer: string;
+};
+
+export type LeadershipHighlight = {
+  title: string;
+  organization: string;
+  detail: string;
 };
 
 export const siteConfig = {
@@ -59,7 +70,7 @@ export const navItems = [
 ];
 
 export const aboutSummary =
-  "I am a Junior Data Scientist building at the intersection of analytics, data engineering, and AI workflows. My work combines Python, PySpark, SQL, ETL pipelines, orchestration, and cloud tooling to turn raw business data into production-ready outputs. At TradeIndia, I have worked on deduplication pipelines, workflow automation, vector-search APIs, and Generative AI use cases with a strong focus on scale, data quality, and business impact. I enjoy using PySpark and workflow automation to turn complex data problems into reliable systems and clear decisions.";
+  "I am a Junior Data Scientist building at the intersection of data engineering, analytics, and applied AI. My work combines Python, PySpark, SQL, ETL pipelines, Airflow, cloud orchestration, APIs, and Generative AI to turn raw business data into reliable production-ready workflows. At TradeIndia, I have worked on large-scale deduplication, workflow automation, vector-search APIs, and keyword generation systems with a strong focus on data quality, speed, and business impact.";
 
 export const aboutHighlights = [
   {
@@ -261,37 +272,55 @@ export const experiences: Experience[] = [
     company: "TradeIndia",
     role: "Junior Data Scientist",
     period: "Feb 2026 - Present",
+    location: "Noida, India",
     impact:
-      "Build production-facing data and AI workflows that improve data quality, automate recurring processes, and support search, discoverability, and stakeholder delivery.",
+      "Build production-facing data and AI workflows that improve data quality, reduce processing time, automate recurring processes, and support semantic search and product discoverability.",
+    metrics: [
+      { label: "Processing gain", value: "~80% faster" },
+      { label: "Core stack", value: "PySpark + Airflow" },
+      { label: "AI layer", value: "Azure OpenAI + Pinecone" }
+    ],
     outcomes: [
-      "Designed and deployed an ETL-based deduplication pipeline using Python and PySpark to process and match large-scale B2B datasets.",
-      "Improved data quality and matching reliability by combining ETL validation steps with scalable record-comparison logic.",
-      "Automated recurring workflows with Apache Airflow, AWS Glue, and Azure Batch to improve scalability and reduce manual effort.",
-      "Developed FastAPI-based vector search APIs using Azure OpenAI embeddings, Pinecone, PostgreSQL, and Elastic APM.",
+      "Designed and deployed a PySpark-based deduplication pipeline to match large-scale B2B datasets and cut processing time by approximately 80%.",
+      "Built ETL validation and record-matching logic to improve data reliability before downstream sales, search, and analytics use.",
+      "Automated recurring workflows with Apache Airflow, AWS Glue, Azure Batch, and AWS S3 to improve scalability and reduce manual effort.",
+      "Built a FastAPI vector-search API for semantic product search using Azure OpenAI embeddings, Pinecone, dynamic metadata filtering, PostgreSQL, and Elastic APM.",
       "Implemented Generative AI long-tail keyword generation workflows to improve product discoverability and search relevance.",
-      "Collaborated with stakeholders on data extraction requests and delivered production-ready data solutions.",
-      "Worked across orchestration, APIs, and analytics workflows to move solutions closer to production use rather than one-off analysis."
+      "Partnered with stakeholders on data extraction requests and converted business needs into production-ready data solutions."
     ]
   },
   {
     company: "TradeIndia",
     role: "Intern - Trainee Data Science",
     period: "Aug 2025 - Feb 2026",
+    location: "Noida, India",
     impact:
-      "Built a strong foundation in data quality, segmentation, and recurring workflow support while working on practical business analytics problems.",
+      "Built a practical foundation in data quality, scraped-data validation, lead qualification, and stakeholder delivery while supporting sales-focused data workflows.",
+    metrics: [
+      { label: "Cycle time", value: "~1 day manual process" },
+      { label: "Business user", value: "Sales team" },
+      { label: "Focus", value: "Qualified leads" }
+    ],
     outcomes: [
-      "Identified data quality gaps affecting sales targeting through exploratory analysis, enabling more accurate customer segmentation.",
-      "Supported lead categorization by tagging profiles based on industry, product relevance, and activity indicators.",
-      "Assisted in automating recurring data-preparation workflows with exposure to AWS S3 and Apache Airflow.",
-      "Worked on recurring business datasets that improved the usability of sales and profile information for downstream review and action."
+      "Cleaned and validated scraped external datasets before matching them against internal company data.",
+      "Tagged qualified leads for the sales team by comparing external records with internal profile and product information.",
+      "Performed recurring manual matching and tagging cycles that took around one day per cycle, directly feeding sales outreach and contract acquisition efforts.",
+      "Collaborated with stakeholders on data extraction requests and delivered production-ready datasets for business review.",
+      "Gained hands-on exposure to recurring data-preparation workflows, cloud storage, and orchestration-oriented thinking."
     ]
   },
   {
     company: "Tata Steel Limited",
     role: "Intern - RDE Norms Analysis Project",
     period: "May 2023 - Jul 2023",
+    location: "Jamshedpur, India",
     impact:
       "Analyzed market and product implications of changing emission norms to support commercial understanding and strategy discussions.",
+    metrics: [
+      { label: "Growth signal", value: "~10% potential" },
+      { label: "Lens", value: "Regulatory demand" },
+      { label: "Output", value: "Sales strategy insights" }
+    ],
     outcomes: [
       "Analyzed the impact of emission norms on product demand to identify shifts in customer preference.",
       "Evaluated product alignment with regulatory changes to uncover potential market opportunities.",
@@ -342,6 +371,15 @@ export const certificationsOrTraining: Certification[] = [
   {
     title: "Product Management",
     issuer: "Udemy"
+  }
+];
+
+export const leadershipHighlights: LeadershipHighlight[] = [
+  {
+    title: "Media Head",
+    organization: "Research and Development Society",
+    detail:
+      "Led event communications, content coordination, and campaign execution to improve audience engagement."
   }
 ];
 

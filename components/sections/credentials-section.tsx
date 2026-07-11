@@ -1,6 +1,6 @@
-import { Award, GraduationCap, MapPin } from "lucide-react";
+import { Award, GraduationCap, MapPin, Megaphone } from "lucide-react";
 
-import { certificationsOrTraining, education } from "@/data/portfolio";
+import { certificationsOrTraining, education, leadershipHighlights } from "@/data/portfolio";
 
 import { HoverPanel } from "@/components/shared/hover-panel";
 import { Reveal } from "@/components/shared/reveal";
@@ -20,7 +20,7 @@ export function CredentialsSection() {
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-2">
+        <div className="mt-12 grid gap-5 lg:grid-cols-[1fr_1fr_0.82fr]">
           <Reveal>
             <HoverPanel>
               <Card className="h-full transition-colors duration-300 hover:border-primary/30">
@@ -98,6 +98,47 @@ export function CredentialsSection() {
                         <p className="text-sm font-medium text-foreground">{item.title}</p>
                         <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
                           {item.issuer}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </HoverPanel>
+          </Reveal>
+
+          <Reveal delay={0.16}>
+            <HoverPanel delay={0.04}>
+              <Card className="h-full transition-colors duration-300 hover:border-primary/30">
+                <CardContent className="p-7">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">
+                      <Megaphone className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.24em] text-primary/80">
+                        Leadership
+                      </p>
+                      <p className="mt-1 font-display text-2xl font-semibold text-foreground">
+                        Communication Signal
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 space-y-4">
+                    {leadershipHighlights.map((item) => (
+                      <div
+                        className="rounded-3xl border border-white/10 bg-background/40 p-5"
+                        key={`${item.title}-${item.organization}`}
+                      >
+                        <p className="font-display text-lg font-semibold text-foreground">
+                          {item.title}
+                        </p>
+                        <p className="mt-1 text-xs uppercase tracking-[0.18em] text-primary/80">
+                          {item.organization}
+                        </p>
+                        <p className="mt-4 text-sm leading-6 text-muted-foreground">
+                          {item.detail}
                         </p>
                       </div>
                     ))}

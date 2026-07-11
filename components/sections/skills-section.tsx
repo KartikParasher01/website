@@ -5,6 +5,19 @@ import { Reveal } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+
+const standoutSkills = new Set([
+  "PySpark",
+  "ETL Pipelines",
+  "Apache Airflow",
+  "AWS Glue",
+  "Azure Batch",
+  "FastAPI",
+  "Azure OpenAI",
+  "Pinecone",
+  "Generative AI"
+]);
 
 export function SkillsSection() {
   return (
@@ -29,7 +42,14 @@ export function SkillsSection() {
                     </p>
                     <div className="mt-5 flex flex-wrap gap-2">
                       {group.items.map((item) => (
-                        <Badge key={item} className="bg-white/5 text-foreground">
+                        <Badge
+                          key={item}
+                          className={cn(
+                            "bg-white/5 text-foreground transition-colors duration-300",
+                            standoutSkills.has(item) &&
+                              "border-primary/25 bg-primary/10 text-primary shadow-[0_0_18px_rgba(77,163,255,0.12)]"
+                          )}
+                        >
                           {item}
                         </Badge>
                       ))}

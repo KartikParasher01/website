@@ -6,6 +6,7 @@ import "./globals.css";
 
 import { SiteFooter } from "@/components/navigation/site-footer";
 import { SiteNavbar } from "@/components/navigation/site-navbar";
+import { ScrollProgress } from "@/components/shared/scroll-progress";
 import { siteConfig } from "@/data/portfolio";
 
 const sans = DM_Sans({
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sans.variable} ${display.variable}`}>
         <div className="relative flex min-h-screen flex-col overflow-x-hidden">
+          <ScrollProgress />
           <SiteNavbar />
           <div className="flex-1 pt-20">{children}</div>
           <SiteFooter />
