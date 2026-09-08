@@ -895,6 +895,14 @@ export default function HomePage() {
             <a href="#contact" data-nav="contact">
               Contact
             </a>
+            <a
+              href={siteConfig.resumeUrl}
+              download="Kartik_Parasher_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume ↓
+            </a>
           </nav>
           <span className="status">
             <i />
@@ -936,11 +944,12 @@ export default function HomePage() {
               <a
                 className="btn"
                 href={siteConfig.resumeUrl}
+                download="Kartik_Parasher_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-mag
               >
-                Resume PDF ↗
+                Download Resume <span className="arr">↓</span>
               </a>
               <a
                 className="quiet-link"
@@ -1315,11 +1324,12 @@ export default function HomePage() {
               <a
                 className="btn"
                 href={siteConfig.resumeUrl}
+                download="Kartik_Parasher_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-mag
               >
-                Resume PDF ↗
+                Download Resume <span className="arr">↓</span>
               </a>
               <a
                 className="quiet-link"
