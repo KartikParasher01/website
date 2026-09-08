@@ -45,11 +45,34 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
+        },
+        // Illoca Design Colors
+        illoca: {
+          bg: "#FBF8F2",
+          paper: "#F6EFE3",
+          card: "#FFFFFF",
+          ink: "#1C1C1E",
+          body: "#414141",
+          muted: "#5B5B5B",
+          light: "#8B8B8B",
+          line: "#DCD5C8",
+          border: "#9C9C9C",
+          blue: "#3B60C5",
+          "blue-dark": "#2B4FA8",
+          coral: "#E76051",
+          "coral-dark": "#CF4C3E",
+          rust: "#EC633D",
+          sand: "#F2E5D0"
         }
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
         display: ["var(--font-display)"]
+        sans: ["var(--font-sans)", "sans-serif"],
+        display: ["var(--font-display)", "sans-serif"],
+        syne: ["var(--font-syne)", "sans-serif"],
+        hand: ["var(--font-hand)", "cursive"],
+        mono: ["var(--font-mono)", "monospace"]
       },
       backgroundImage: {
         "hero-glow":
@@ -58,15 +81,27 @@ const config = {
       boxShadow: {
         glow: "0 0 0 1px rgba(77, 163, 255, 0.18), 0 24px 90px rgba(0, 0, 0, 0.38)",
         panel: "0 18px 40px rgba(0, 0, 0, 0.35)"
+        paper: "3px 3px 0px rgba(0, 0, 0, 0.08)",
+        "paper-lg": "5px 5px 0px rgba(0, 0, 0, 0.1)",
+        "paper-card": "4px 4px 0px rgba(0, 0, 0, 0.08)",
+        tab: "4px -2px 0px rgba(0, 0, 0, 0.06)",
+        glow: "0 0 0 1px rgba(59, 96, 197, 0.18), 0 20px 60px rgba(0, 0, 0, 0.08)"
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-8px)" }
+          "50%": { transform: "translateY(-6px)" }
+        },
+        spinSlow: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" }
         }
       },
       animation: {
         float: "float 6s ease-in-out infinite"
+        float: "float 6s ease-in-out infinite",
+        "spin-slow": "spinSlow 12s linear infinite"
       }
     }
   },

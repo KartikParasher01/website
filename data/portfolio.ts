@@ -3,6 +3,8 @@ export type Project = {
   title: string;
   category: string;
   repoUrl: string;
+  liveUrl?: string;
+  featured?: boolean;
   shortDescription: string;
   spotlight: string;
   tools: string[];
@@ -55,9 +57,15 @@ export type LeadershipHighlight = {
 export const siteConfig = {
   name: "Kartik Parasher",
   role: "Junior Data Scientist",
+  role: "Data & AI Engineer",
   email: "kartikparasher2001@gmail.com",
+  phone: "+91 8969809515",
+  location: "Noida / Jamshedpur, India",
   linkedin: "https://www.linkedin.com/in/kartikparasher",
   github: "https://github.com/KartikParasher01"
+  github: "https://github.com/KartikParasher01",
+  summary:
+    "Data & AI Engineer skilled in Python, SQL, PySpark, ETL, Airflow, FastAPI, Azure OpenAI, and Pinecone. Experienced in building production-oriented data pipelines, REST APIs, AI-powered applications, and search systems, with hands-on experience across AWS and Azure."
 };
 
 export const navItems = [
@@ -71,36 +79,110 @@ export const navItems = [
 
 export const aboutSummary =
   "I am a Junior Data Scientist building at the intersection of data engineering, analytics, and applied AI. My work combines Python, PySpark, SQL, ETL pipelines, Airflow, cloud orchestration, APIs, and Generative AI to turn raw business data into reliable production-ready workflows. At TradeIndia, I have worked on large-scale deduplication, workflow automation, vector-search APIs, and keyword generation systems with a strong focus on data quality, speed, and business impact.";
+export const aboutSummary = siteConfig.summary;
 
 export const aboutHighlights = [
   {
     title: "ETL Pipelines",
     description: "Build and automate data preparation flows focused on validation, deduplication, and matching for reliable downstream use."
+    title: "ETL & Data Engineering",
+    description:
+      "Design and deploy production-grade pipelines for data validation, deduplication, and record matching across large-scale enterprise datasets."
   },
   {
     title: "PySpark",
     description: "Process and transform larger datasets with scalable Python-first workflows built for production-style data work."
+    title: "PySpark & Big Data",
+    description:
+      "Process and transform multi-gigabyte B2B datasets with PySpark, cutting processing time by ~80%."
   },
   {
     title: "Airflow & Cloud",
     description: "Orchestrate recurring jobs with Apache Airflow and cloud services like AWS Glue, AWS S3, and Azure Batch."
+    title: "Airflow & Cloud Orchestration",
+    description:
+      "Automate recurring business-critical DAGs using Apache Airflow, AWS Glue, AWS S3, and Azure Batch."
   },
   {
     title: "APIs & Search",
     description: "Develop API-backed data applications, including vector search workflows using FastAPI and modern embedding stacks."
+    title: "APIs & Vector Search",
+    description:
+      "Build low-latency FastAPI services utilizing Azure OpenAI embeddings, Pinecone, and dynamic metadata filtering for semantic product search."
   },
   {
     title: "Generative AI",
     description: "Apply AI workflows to keyword generation, discoverability, and practical business use cases grounded in real data systems."
+    title: "Applied Generative AI",
+    description:
+      "Architect LLM-powered systems including automated long-tail keyword generators and agentic web research assistants with Tavily and Groq."
   }
 ];
 
 export const projects: Project[] = [
   {
+    slug: "researchpilot-ai",
+    title: "ResearchPilot AI — Web Research Assistant",
+    category: "AI & Web Intelligence",
+    repoUrl: "https://github.com/KartikParasher01/ResearchPilot-AI",
+    liveUrl: "https://researchpilot-ai.onrender.com",
+    featured: true,
+    shortDescription:
+      "Built an AI-powered web research assistant that converts user questions into targeted search queries, retrieves web sources, scrapes relevant content, and generates structured research reports using an LLM.",
+    spotlight:
+      "Implemented a modular research pipeline with query planning, URL deduplication, web scraping, source attribution, confidence scoring, and Pydantic-based response validation, deployed on Render.",
+    tools: [
+      "Python",
+      "Gradio",
+      "Groq / OpenAI API",
+      "Tavily Search",
+      "BeautifulSoup",
+      "Pydantic",
+      "Render"
+    ],
+    previewPoints: [
+      "Converts complex user inquiries into targeted multi-hop search queries via automated query planning.",
+      "Performs real-time web scraping, URL deduplication, and source attribution with confidence scoring.",
+      "Enforces schema compliance and deterministic report formatting using Pydantic validation.",
+      "Production-ready deployment on Render with responsive Gradio interface and environment-based secret isolation."
+    ],
+    metrics: [
+      { label: "Architecture", value: "Multi-Source Agentic" },
+      { label: "Validation", value: "Pydantic Schema Strict" },
+      { label: "Deployment", value: "Render Live Public Web" },
+      { label: "API Engines", value: "Tavily + Groq LLM" }
+    ],
+    caseStudy: {
+      problemStatement:
+        "Modern research requires sifting through hundreds of search results, filtering spam or duplicate domains, reading dense articles, and extracting verified citations. Manual research is slow, error-prone, and unstructured. The goal was to build an end-to-end automated research agent that synthesizes deep, citation-backed intelligence reports in seconds.",
+      datasetDescription:
+        "Dynamic live web index accessed through the Tavily Search API, coupled with BeautifulSoup web scraping on retrieved URLs for full text ingestion, content sanitization, and structured context window preparation.",
+      approach: [
+        "Built a query planning layer that takes complex natural language queries and decomposes them into focused search terms.",
+        "Engineered an automated deduplication and web-scraping pipeline using Tavily Search and BeautifulSoup to retrieve high-signal web sources while pruning noise.",
+        "Integrated Groq's high-speed inference engine (OpenAI-compatible) for ultra-fast document synthesis and structured markdown report generation.",
+        "Implemented strict Pydantic models for response schema validation, citation attribution, and automated confidence scoring.",
+        "Packaged and deployed the entire application with an interactive Gradio web UI on Render with environment-based configuration management."
+      ],
+      keyInsights: [
+        "Query decomposition significantly improves relevance compared to passing raw queries directly into search engines.",
+        "Deterministic URL deduplication prevents LLM hallucination and duplicate citation weight.",
+        "Pydantic validation eliminates schema breakdown during complex structured report generation.",
+        "High-throughput inference with Groq ensures sub-5-second executive summaries even across multi-source queries."
+      ],
+      businessImpact: [
+        "Cuts web research and report synthesis time from hours to seconds for competitive intelligence and market analysis.",
+        "Provides reproducible, audit-ready source attribution and confidence indicators for every generated finding.",
+        "Demonstrates production-ready full-stack AI engineering combining APIs, scraping, LLMs, and cloud deployment."
+      ]
+    }
+  },
+  {
     slug: "india-road-accident-analysis",
     title: "India Road Accident Analysis",
     category: "Public Safety Analytics",
     repoUrl: "https://github.com/KartikParasher01/IndiaRoadAccidentAnalysis",
+    featured: false,
     shortDescription:
       "Analyzed 12,000+ accident records to uncover high-risk driver segments, peak accident periods, and behavior patterns that could support targeted safety interventions.",
     spotlight:
@@ -144,6 +226,7 @@ export const projects: Project[] = [
     title: "Spotify Dashboard (Power BI)",
     category: "Consumer Media Analytics",
     repoUrl: "https://github.com/KartikParasher01/spotify-stream-analysis",
+    featured: false,
     shortDescription:
       "Developed an interactive Power BI dashboard to analyze top-streamed songs, artist performance, and track-level listening trends in a clear, recruiter-friendly format.",
     spotlight:
@@ -186,7 +269,9 @@ export const projects: Project[] = [
     slug: "sql-music-store-analysis",
     title: "SQL Music Store Analysis",
     category: "Revenue and Customer Analytics",
+    category: "Revenue & Customer Analytics",
     repoUrl: "https://github.com/KartikParasher01/SQL_Music_Store_analysis",
+    featured: false,
     shortDescription:
       "Used SQL to answer business questions around top customers, genre performance, market concentration, and overall revenue drivers in a music store dataset.",
     spotlight:
@@ -231,31 +316,76 @@ export const skillGroups = [
   {
     title: "Programming & Processing",
     items: ["Python", "PySpark", "Pandas", "NumPy"]
+    title: "Data Engineering",
+    description: "Production pipelines, deduplication & orchestration",
+    items: [
+      "ETL Pipelines",
+      "Data Validation",
+      "Deduplication",
+      "Data Matching",
+      "EDA",
+      "Apache Airflow",
+      "PySpark"
+    ]
   },
   {
     title: "Data Engineering",
     items: ["ETL Pipelines", "Data Validation", "Deduplication", "Data Matching", "FastAPI"]
+    title: "Programming & Databases",
+    description: "Core algorithms, data structures & data engines",
+    items: [
+      "Python (Pandas, NumPy)",
+      "PySpark",
+      "SQL",
+      "PostgreSQL",
+      "MySQL",
+      "BigQuery"
+    ]
   },
   {
     title: "Databases & Search",
     items: ["SQL", "PostgreSQL", "MySQL", "BigQuery", "Pinecone"]
+    title: "AI & Application Development",
+    description: "LLMs, vector indexing & high-performance APIs",
+    items: [
+      "FastAPI",
+      "Pydantic",
+      "Gradio",
+      "Azure OpenAI",
+      "Pinecone",
+      "LLM Applications",
+      "Prompt Engineering"
+    ]
   },
   {
     title: "Cloud & Orchestration",
     items: ["Apache Airflow", "AWS Glue", "AWS S3", "Azure Batch", "Azure OpenAI"]
+    title: "Cloud & Deployment",
+    description: "Cloud compute, object storage & serverless hosting",
+    items: [
+      "AWS S3",
+      "AWS Glue",
+      "Azure Batch",
+      "Render"
+    ]
   },
   {
     title: "Reporting & BI",
+    title: "Visualization & Reporting",
+    description: "Executive dashboards & data-driven narratives",
     items: [
       "Power BI",
       "Power Query",
       "MS Excel (Advanced)",
       "EDA",
       "Business Storytelling"
+      "PowerPoint"
     ]
   },
   {
     title: "Tools & AI Workflows",
+    title: "Tools & Infrastructure",
+    description: "Developer tools, containers & version control",
     items: [
       "GitHub",
       "Google Sheets",
@@ -263,6 +393,7 @@ export const skillGroups = [
       "Generative AI",
       "Elastic APM",
       "PowerPoint"
+      "Docker"
     ]
   }
 ];
@@ -272,13 +403,18 @@ export const experiences: Experience[] = [
     company: "TradeIndia",
     role: "Junior Data Scientist",
     period: "Feb 2026 - Present",
+    period: "Feb 2026 – Present",
     location: "Noida, India",
     impact:
       "Build production-facing data and AI workflows that improve data quality, reduce processing time, automate recurring processes, and support semantic search and product discoverability.",
+      "Architect and maintain scalable PySpark deduplication systems, automated Airflow DAGs across AWS and Azure, and production-facing vector search APIs.",
     metrics: [
       { label: "Processing gain", value: "~80% faster" },
       { label: "Core stack", value: "PySpark + Airflow" },
       { label: "AI layer", value: "Azure OpenAI + Pinecone" }
+      { label: "Processing Gain", value: "~80% cut in runtime" },
+      { label: "Vector Search", value: "Azure OpenAI + Pinecone" },
+      { label: "Orchestration", value: "Airflow + AWS Glue + Azure Batch" }
     ],
     outcomes: [
       "Designed and deployed a PySpark-based deduplication pipeline to match large-scale B2B datasets and cut processing time by approximately 80%.",
@@ -287,19 +423,29 @@ export const experiences: Experience[] = [
       "Built a FastAPI vector-search API for semantic product search using Azure OpenAI embeddings, Pinecone, dynamic metadata filtering, PostgreSQL, and Elastic APM.",
       "Implemented Generative AI long-tail keyword generation workflows to improve product discoverability and search relevance.",
       "Partnered with stakeholders on data extraction requests and converted business needs into production-ready data solutions."
+      "Designed and deployed a PySpark-based deduplication pipeline to match large-scale B2B datasets, cutting processing time by ~80%.",
+      "Automated recurring workflows using Apache Airflow, AWS Glue, and Azure Batch, improving pipeline scalability and reducing manual effort.",
+      "Built a FastAPI vector search API enabling AI-driven semantic product search across the company's product catalog, using Azure OpenAI embeddings, Pinecone, and dynamic metadata filtering.",
+      "Implemented Generative AI-based long-tail keyword generation workflows to improve product discoverability and search relevance."
     ]
   },
   {
     company: "TradeIndia",
     role: "Intern - Trainee Data Science",
     period: "Aug 2025 - Feb 2026",
+    role: "Intern – Trainee-Data Science",
+    period: "Aug 2025 – Feb 2026",
     location: "Noida, India",
     impact:
       "Built a practical foundation in data quality, scraped-data validation, lead qualification, and stakeholder delivery while supporting sales-focused data workflows.",
+      "Spearheaded data cleaning, external record matching, and automated lead tagging to fuel enterprise sales outreach pipelines.",
     metrics: [
       { label: "Cycle time", value: "~1 day manual process" },
       { label: "Business user", value: "Sales team" },
       { label: "Focus", value: "Qualified leads" }
+      { label: "Cycle Impact", value: "~1 day per cycle" },
+      { label: "Stakeholders", value: "Sales & Outreach" },
+      { label: "Data Quality", value: "Production-ready datasets" }
     ],
     outcomes: [
       "Cleaned and validated scraped external datasets before matching them against internal company data.",
@@ -307,25 +453,37 @@ export const experiences: Experience[] = [
       "Performed recurring manual matching and tagging cycles that took around one day per cycle, directly feeding sales outreach and contract acquisition efforts.",
       "Collaborated with stakeholders on data extraction requests and delivered production-ready datasets for business review.",
       "Gained hands-on exposure to recurring data-preparation workflows, cloud storage, and orchestration-oriented thinking."
+      "Cleaned and validated scraped external datasets, matching records against internal company data to identify and tag qualified leads for the sales team.",
+      "Manually performed this data matching and tagging process (~1 day per cycle), directly feeding sales outreach and contract acquisition efforts.",
+      "Collaborated with stakeholders to handle data extraction requests and deliver production-ready data solutions."
     ]
   },
   {
     company: "Tata Steel Limited",
     role: "Intern - RDE Norms Analysis Project",
     period: "May 2023 - Jul 2023",
+    role: "Intern - RDE Norms Analysis project",
+    period: "May 2023 – July 2023",
     location: "Jamshedpur, India",
     impact:
       "Analyzed market and product implications of changing emission norms to support commercial understanding and strategy discussions.",
+      "Delivered strategic regulatory impact analysis on Real Driving Emissions (RDE) norms, forecasting demand shifts across steel product lines.",
     metrics: [
       { label: "Growth signal", value: "~10% potential" },
       { label: "Lens", value: "Regulatory demand" },
       { label: "Output", value: "Sales strategy insights" }
+      { label: "Market Opportunity", value: "~10% growth potential" },
+      { label: "Domain", value: "Automotive & Industrial Steel" },
+      { label: "Strategic Focus", value: "Emission Compliance" }
     ],
     outcomes: [
       "Analyzed the impact of emission norms on product demand to identify shifts in customer preference.",
       "Evaluated product alignment with regulatory changes to uncover potential market opportunities.",
       "Generated insights that supported sales strategy by identifying segments with approximately 10% growth potential.",
       "Translated regulatory trend analysis into decision-support findings for commercial and market-focused discussion."
+      "Analyzed impact of emission norms on product demand to identify shifts in customer preferences.",
+      "Evaluated product alignment with regulatory changes to identify potential market opportunities.",
+      "Generated insights to support sales strategy, identifying segments with ~10% growth potential."
     ]
   }
 ];
@@ -335,6 +493,7 @@ export const education: Education[] = [
     institution: "Birla Institute of Technology",
     credential: "Bachelor of Business Administration",
     period: "2021 - 2024",
+    period: "2021 – 2024",
     location: "Ranchi, India",
     detail: "Cumulative GPA: 7.29"
   },
@@ -342,8 +501,10 @@ export const education: Education[] = [
     institution: "Vivek Vidyalaya",
     credential: "Central Board of Secondary Education (CBSE)",
     period: "2019 - 2021",
+    period: "2019 – 2021",
     location: "Jamshedpur, India",
     detail: "Senior secondary education"
+    detail: "Senior Secondary Education (CBSE)"
   }
 ];
 
@@ -367,6 +528,7 @@ export const certificationsOrTraining: Certification[] = [
   {
     title: "Data Visualization Job Simulations",
     issuer: "Tata, Accenture, and Deloitte"
+    issuer: "TATA, Accenture, Deloitte"
   },
   {
     title: "Product Management",
@@ -380,6 +542,7 @@ export const leadershipHighlights: LeadershipHighlight[] = [
     organization: "Research and Development Society",
     detail:
       "Led event communications, content coordination, and campaign execution to improve audience engagement."
+      "Led media and communications for events by managing content and coordinating campaigns to improve engagement."
   }
 ];
 
@@ -388,6 +551,11 @@ export const contactLinks = [
     label: "Email",
     value: siteConfig.email,
     href: `mailto:${siteConfig.email}`
+  },
+  {
+    label: "Phone",
+    value: siteConfig.phone,
+    href: `tel:${siteConfig.phone.replace(/\\s+/g, "")}`
   },
   {
     label: "LinkedIn",
