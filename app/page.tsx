@@ -97,7 +97,7 @@ export default function HomePage() {
         } else {
           fxCtx.fillStyle = p.c;
           fxCtx.beginPath();
-          fxCtx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+          fxCtx.arc(p.x, p.y, Math.max(0, p.size * p.life), 0, Math.PI * 2);
           fxCtx.fill();
         }
       }
