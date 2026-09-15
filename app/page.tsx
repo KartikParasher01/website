@@ -1084,7 +1084,7 @@ export default function HomePage() {
           <div className="wrap">
             <div className="eyebrow rv">Projects</div>
             <h2 className="sec-title rv" data-scramble>
-              Built for production, shipped for real<span className="dot">.</span>
+              Built from scratch, shipped for real<span className="dot">.</span>
             </h2>
             <p className="sec-sub rv d1">
               From autonomous research agents to large-scale distributed analytics.

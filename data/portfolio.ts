@@ -112,16 +112,11 @@ export const aboutData = {
 
 export const careerTimeline: TimelineItem[] = [
   {
-    year: "2021 — 2024",
-    title: "Bachelor of Business Administration",
-    organization: "Birla Institute of Technology (BIT), Ranchi",
-    description: "Cumulative GPA: 7.29. Built a quantitative foundation in business analytics, operations research, statistics, and decision systems."
-  },
-  {
-    year: "MAY 2023 — JULY 2023",
-    title: "Intern — RDE Norms Analysis Project",
-    organization: "Tata Steel Limited, Jamshedpur",
-    description: "Analyzed impact of emission norms on product demand to identify customer preference shifts. Evaluated product alignment with regulatory changes to identify segments with ~10% growth potential."
+    year: "FEB 2026 — PRESENT",
+    title: "Junior Data Scientist",
+    organization: "TradeIndia, Noida",
+    description: "Designed PySpark deduplication pipeline cutting processing time by ~80%. Automated Airflow DAGs across AWS Glue and Azure Batch. Built FastAPI vector search API using Azure OpenAI and Pinecone.",
+    isCurrent: true
   },
   {
     year: "AUG 2025 — FEB 2026",
@@ -130,11 +125,16 @@ export const careerTimeline: TimelineItem[] = [
     description: "Cleaned and validated scraped external datasets, matching records against internal company data to identify and tag qualified leads for sales outreach (~1 day per cycle)."
   },
   {
-    year: "FEB 2026 — PRESENT",
-    title: "Junior Data Scientist",
-    organization: "TradeIndia, Noida",
-    description: "Designed PySpark deduplication pipeline cutting processing time by ~80%. Automated Airflow DAGs across AWS Glue and Azure Batch. Built FastAPI vector search API using Azure OpenAI and Pinecone.",
-    isCurrent: true
+    year: "MAY 2023 — JULY 2023",
+    title: "Intern — RDE Norms Analysis Project",
+    organization: "Tata Steel Limited, Jamshedpur",
+    description: "Analyzed impact of emission norms on product demand to identify customer preference shifts. Evaluated product alignment with regulatory changes to identify segments with ~10% growth potential."
+  },
+  {
+    year: "2021 — 2024",
+    title: "Bachelor of Business Administration",
+    organization: "Birla Institute of Technology (BIT), Ranchi",
+    description: "Cumulative GPA: 7.29. Built a quantitative foundation in business analytics, operations research, statistics, and decision systems."
   }
 ];
 
